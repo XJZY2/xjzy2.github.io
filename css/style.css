@@ -1,0 +1,95 @@
+html {
+    background-color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h1#title {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    animation: show 2s;
+    animation-timing-function: ease-in-out;
+}
+
+p#introduce {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    animation: show 2s;
+    animation-timing-function: ease-in-out;
+}
+
+h1#openweb {
+    color: rgb(138, 43, 226);
+    text-align: center;
+    animation: show 2s;
+    animation-timing-function: ease-in-out;
+}
+
+img {
+    margin-left: 223px;
+    animation: show 2s;
+    animation-timing-function: ease-in-out;
+}
+
+button.Linkbutton {
+    margin-left: 310px;
+    margin-top: 50px;
+    text-align: center;
+    border: 2px solid;
+    border-color: white;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    animation: show 2s;
+    animation-timing-function: ease-in-out;
+    vertical-align:middle
+}
+
+button.Linkbutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button.Linkbutton span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button.Linkbutton:hover span {
+  padding-right: 25px;
+}
+
+button.Linkbutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+p#by {
+    text-align: right;
+    color: rgb(50, 50, 50);
+    animation: show 2s;
+    animation-timing-function: ease-in-out;
+}
