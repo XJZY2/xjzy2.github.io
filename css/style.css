@@ -1,3 +1,10 @@
+:root {
+    --screen-img-width: calc((100vw - 900px)/2);
+    --screen-button-width: calc((100vw - 400px)/3);
+    --screen-min-button-width: calc((100vw - 300px)/3);
+    --screen-very-min-button-width: calc((100vw - 200px)/3);
+}
+
 html {
     background-color: black;
 }
@@ -39,27 +46,75 @@ h1#openweb {
     animation-timing-function: ease-in-out;
 }
 
-img {
-    margin-left: 223px;
-    animation: show 2s;
-    animation-timing-function: ease-in-out;
+@media screen and (min-width: 900px) {
+    img {
+        margin-left: var(--screen-img-width);
+        animation: show 2s;
+        animation-timing-function: ease-in-out;
+    }
 }
 
-button.Linkbutton {
-    margin-left: 310px;
-    margin-top: 50px;
-    text-align: center;
-    border: 2px solid;
-    border-color: white;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    font-size: 20px;
-    width: 200px;
-    height: 50px;
-    animation: show 2s;
-    animation-timing-function: ease-in-out;
-    vertical-align:middle
+@media screen and (max-width: 900px) {
+    img {
+        display: none
+    }
+}
+
+@media screen and (min-width: 530px) {
+    button.Linkbutton {
+        margin-left: var(--screen-button-width);
+        margin-top: 50px;
+        text-align: center;
+        border: 2px solid;
+        border-color: white;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 20px;
+        width: 200px;
+        height: 50px;
+        animation: show 2s;
+        animation-timing-function: ease-in-out;
+        vertical-align:middle
+    }
+}
+
+@media screen and (max-width: 530px) {
+    button.Linkbutton {
+        margin-left: var(--screen-min-button-width);
+        margin-top: 50px;
+        text-align: center;
+        border: 2px solid;
+        border-color: white;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 20px;
+        width: 150px;
+        height: 50px;
+        animation: show 2s;
+        animation-timing-function: ease-in-out;
+        vertical-align:middle
+    }
+}
+
+@media screen and (max-width: 370px) {
+    button.Linkbutton {
+        margin-left: var(--screen-very-min-button-width);
+        margin-top: 50px;
+        text-align: center;
+        border: 2px solid;
+        border-color: white;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 20px;
+        width: 100px;
+        height: 50px;
+        animation: show 2s;
+        animation-timing-function: ease-in-out;
+        vertical-align:middle
+    }
 }
 
 button.Linkbutton span {
