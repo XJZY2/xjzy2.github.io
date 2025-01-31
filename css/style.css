@@ -118,6 +118,63 @@ h1#openweb {
     }
 }
 
+@media screen and (min-width: 530px) {
+    button.disableLinkbutton {
+        margin-left: var(--screen-button-width);
+        margin-top: 50px;
+        text-align: center;
+        border: 2px solid;
+        border-color: white;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 20px;
+        width: 200px;
+        height: 50px;
+        animation: show 2s;
+        animation-timing-function: ease-in-out;
+        vertical-align:middle
+    }
+}
+
+@media screen and (max-width: 530px) {
+    button.disableLinkbutton {
+        margin-left: var(--screen-min-button-width);
+        margin-top: 50px;
+        text-align: center;
+        border: 2px solid;
+        border-color: white;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 20px;
+        width: 150px;
+        height: 50px;
+        animation: show 2s;
+        animation-timing-function: ease-in-out;
+        vertical-align:middle
+    }
+}
+
+@media screen and (max-width: 370px) {
+    button.disableLinkbutton {
+        margin-left: var(--screen-very-min-button-width);
+        margin-top: 50px;
+        text-align: center;
+        border: 2px solid;
+        border-color: white;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 20px;
+        width: 100px;
+        height: 50px;
+        animation: show 2s;
+        animation-timing-function: ease-in-out;
+        vertical-align:middle
+    }
+}
+
 button.Linkbutton span {
   cursor: pointer;
   display: inline-block;
@@ -141,6 +198,35 @@ button.Linkbutton:hover span {
 button.Linkbutton:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+button.disableLinkbutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button.disableLinkbutton span:after {
+  content: '×';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button.disableLinkbutton:hover span {
+  padding-right: 25px;
+}
+
+button.disableLinkbutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+button.disableLinkbutton:hover {
+    background-color: #db2222;
 }
 
 p#by {
